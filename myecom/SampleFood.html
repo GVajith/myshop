@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.citrincooperman.com/-/media/food-and-beverage.jpg') no-repeat center center/cover;
+  filter: blur(3.5px); /* Adjust blur size */
+  z-index: -1; /* Push it behind content */
+}
+
+.header-text h1 {
+  text-align: center;
+  color: rgb(128, 253, 112);
+  padding: 50px;
+    font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header-text p {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-top: -50px;
+}
+
+.card-content {
+  text-align: center;
+  background: rgb(241, 239, 239);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;       /* reduced from 30px */
+  width: 220px;        /* set fixed width for smaller cards */
+  margin: 10px auto;
+  
+  }
+.product-image {
+  width: 100%;         /* fits inside card */
+  max-height: 180px;   /* reduce image height */
+  object-fit: contain;
+ }
+  .brand {
+            font-weight: bold;
+            color: #8a3812;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+                 
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <div class ="header-text">
+    <h1>Your Gateway to Freshness and Quality</h1>
+    <p>From Farm to Table, Quality Food at Your Fingertips</p>
+  </div>
+
+ <div class="container">
+<br>
+<br>
+<br>    
+        
+  <div class="bestsellers-grid"> 
+    
+    <div class="card-content">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxPFsjNo1SNBS70_XvLT2vdFvTifOfoweRstSgZU0cM1nyZs-Kw3BWwODUW-mDkSFm3rKlxyUoNuL6brzReO88bQJqb8YlBhPtTRny4-omTUe_8CKuW8RsVw"
+        alt="Milk" class="product-image">
+    <div class="brand">Satv Dairy</div>
+    <div class="product-name">Desi Cow A2 Milk</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹640 </span>
+    <span class="discounted-price">₹555</span>
+    </div>
+     <button class="buy-button"
+     onclick="addToCart(`Cow Milk`,'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxPFsjNo1SNBS70_XvLT2vdFvTifOfoweRstSgZU0cM1nyZs-Kw3BWwODUW-mDkSFm3rKlxyUoNuL6brzReO88bQJqb8YlBhPtTRny4-omTUe_8CKuW8RsVw',555)"> Add to Cart </button>
+
+ </div>
+                                         
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQnfGlpq3bmKCMMCrPBMR05XWdUzA1nUqLG5a-wCHh-DxSp7I_kW2XtqADOfjOiwI9KD1DkZSwDMu3hrzu4Q70BMAtgsoA6y6SWvky5vANoKcRMfkhk8w7_ww"
+    alt="Broccoli" class="product-image">
+    <div class="brand">Broccoli</div>
+   <div class="product-name">Organic Broccoli - 250 GM</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+    <span class="mrp"> ₹80</span>
+    <span class="discounted-price">₹65</span>
+    </div>
+    <button class="buy-button"
+    onclick="addToCart('Broccoli','https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQnfGlpq3bmKCMMCrPBMR05XWdUzA1nUqLG5a-wCHh-DxSp7I_kW2XtqADOfjOiwI9KD1DkZSwDMu3hrzu4Q70BMAtgsoA6y6SWvky5vANoKcRMfkhk8w7_ww',65)"> Add to Cart </button>
+  </div>
+            
+ <div class="card-content">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxbc1G76qtn9fwfL6fGR5o_VNFB-N1Ndzes886ymxHVjwjW62tMSXuafvOENEmO-iadyl236tDbaDN9lEu9uHsbl6erEQZC4Nh21ctzlxBzhGkE-gCPHbOtA"
+        alt="Grapes" class="product-image">
+    <div class="brand">Grapes</div>
+    <div class="product-name">Red Grapes Seedless</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹560 </span>
+    <span class="discounted-price">₹450</span>
+    </div>
+     <button class="buy-button" 
+     onclick="addToCart(`Red Grapes`,'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxbc1G76qtn9fwfL6fGR5o_VNFB-N1Ndzes886ymxHVjwjW62tMSXuafvOENEmO-iadyl236tDbaDN9lEu9uHsbl6erEQZC4Nh21ctzlxBzhGkE-gCPHbOtA',450)"> Add to Cart </button>
+
+ </div>
+
+ 
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTPUzyTjRw7VqKfJUb41zY4hdM3eFJRDa55ip38oe0ivyd_cMhjtLjCMmGZ44YEZ73hwWqSyD4H-4nayV0qQoTJAHl5uj4-b18pvGYzrevMNhGSMOF4bB_EYQ"
+        alt="Dry Fruits" class="product-image">
+    <div class="brand">Plum Natural</div>
+    <div class="product-name">Plum Natural Mixed Dry Fruits - 500gm Jar </div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹450</span>
+    <span class="discounted-price">₹345</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Mixed Dry Fruits','https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTPUzyTjRw7VqKfJUb41zY4hdM3eFJRDa55ip38oe0ivyd_cMhjtLjCMmGZ44YEZ73hwWqSyD4H-4nayV0qQoTJAHl5uj4-b18pvGYzrevMNhGSMOF4bB_EYQ',1409)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_Ayct2skV5VKHMxPf7gPlzTc7437kwotMGflhGFytN90Th-oJAJJqH4_5lmf_uFQezrjFGB5qtK-kn5LjrJgVTExIbq5UZcRgN4fJztzn8ckaL57fK0VH"
+        alt="Chocolate" class="product-image">
+    <div class="brand">Entisi </div>
+    <div class="product-name">Entisi Dark Chocolate Bar</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹740</span>
+    <span class="discounted-price">₹550</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Entisi Dark Chocolate','7https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_Ayct2skV5VKHMxPf7gPlzTc7437kwotMGflhGFytN90Th-oJAJJqH4_5lmf_uFQezrjFGB5qtK-kn5LjrJgVTExIbq5UZcRgN4fJztzn8ckaL57fK0VH',550)"> Add to Cart </button>
+
+ </div>
+
+  <div class="card-content">
+   <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThugBQNDg4wBHq1jfZx9VOfn2ngFOo_VPk52Z47RNJRllcYivpXj46YUUkL-y_bon_0syIMwhNCDx4FhdMViPNoVgRk9Q5Y3vSGUwF8fnhXIcvDQ74dq1RWA"
+    alt="ABC Malt" class="product-image">
+    <div class="brand">Spicy Samayals</div>
+    <div class="product-name">ABC Malt (Apple, Beetroot, Carrot) 1Kg</div>
+       <div class="price-info">
+       <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+       <span class="mrp">₹1600</span>
+       <span class="discounted-price">₹1399</span>
+    </div>
+    <button class="buy-button" 
+    onclick="addToCart('ABC Malt','https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThugBQNDg4wBHq1jfZx9VOfn2ngFOo_VPk52Z47RNJRllcYivpXj46YUUkL-y_bon_0syIMwhNCDx4FhdMViPNoVgRk9Q5Y3vSGUwF8fnhXIcvDQ74dq1RWA',1399)"> Add to Cart </button>
+</div>
+
+  </div>
+   </div>
+
+    <script src="sample.js"></script>  
+    
+  <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>
+

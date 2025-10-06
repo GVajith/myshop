@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/002/382/062/non_2x/back-to-school-stationery-background-free-vector.jpg') no-repeat center center/cover;
+  filter: blur(3.8px); /* Adjust blur size */
+  z-index: -1; /* Push it behind content */
+}
+
+.header-text h1 {
+  text-align: center;
+  color: rgb(2, 20, 48);
+  padding: 50px;
+    font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header-text p {
+  text-align: center;
+  color: rgb(5, 36, 104);
+  font-size: 35px;
+  margin-top: -50px;
+}
+
+.card-content {
+  text-align: center;
+  background: rgb(241, 239, 239);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;       /* reduced from 30px */
+  width: 220px;        /* set fixed width for smaller cards */
+  margin: 10px auto;
+  
+  }
+.product-image {
+  width: 100%;         /* fits inside card */
+  max-height: 180px;   /* reduce image height */
+  object-fit: contain;
+ }
+  .brand {
+            font-weight: bold;
+            color: #8a3812;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+                 
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <div class ="header-text">
+    <h1>The Canvas of your Creativity</h1>
+    <p>Dive Into A World of Creativity With Our Artistry</p>
+  </div>
+
+ <div class="container">
+<br>
+<br>
+<br>
+        
+  <div class="bestsellers-grid"> 
+    <div class="card-content">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuaOQwtXKVMCPDKDujvQ9D59NK8GKAxkMjh_sDCpIsUBFaXmzcIaclUKeRfE7HAYu7Fl-S4Y1_0iI3gLgbF_wOzndKXQzfwULAycj1lLlK7pEmXNmrMYVFWg"
+        alt="Stationery Combo" class="product-image">
+    <div class="brand">Favor Statione</div>
+    <div class="product-name">Stationery Combo for Kids Unicorn Theme</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹245 </span>
+    <span class="discounted-price">₹180</span>
+    </div>
+     <button class="buy-button"
+     onclick="addToCart('Stationery Combo for Kids Unicorn Theme','https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuaOQwtXKVMCPDKDujvQ9D59NK8GKAxkMjh_sDCpIsUBFaXmzcIaclUKeRfE7HAYu7Fl-S4Y1_0iI3gLgbF_wOzndKXQzfwULAycj1lLlK7pEmXNmrMYVFWg',180)"> Add to Cart </button>
+</div>
+                                         
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR5vRThTzVr3G8CARqgOCoEcG64Ovo5sRS12s6ZY5gUOzUPGqu4Deaxc0JztPgfoBKeWQrv7CHo7ND0RZHBGshsJthOlIZpFgP4OHxgb2HtyaDRM-PiSRxE"
+    alt="Notebook" class="product-image">
+    <div class="brand">PAPboo</div>
+   <div class="product-name">PAPboo Spiral Wiro Notebook</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+    <span class="mrp"> ₹450</span>
+    <span class="discounted-price">₹380</span>
+    </div>
+    <button class="buy-button"
+    onclick="addToCart('PAPboo Spiral Wiro Notebook','_adgdhttps://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRqs836EGGdDw6AcLppYg6u41AmdfjNBvdw8VcJhcZOmo9Uqb4y1bSs2tpXvi4s646eTDxcpULa7pVd1WDsfzq91_8ULZWRpFDyxZIjohgs-DuF__bBroaZ',380)"> Add to Cart </button>
+  </div>
+            
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSQlgkagLR2eiAF7OsWCuUITkczov-DCE6LPjMgy0YMwnjpiWFJpZfph0nuZD-Nja9WoWXI4iZEXCL9AElLaE6zz8Utbv_-FgIZQkziF1pyrk5sDJxTOZ6o"
+        alt="Watercolor" class="product-image">
+    <div class="brand">Chrome</div>
+    <div class="product-name">Chrome Professional Watercolor Kit 36 Colors Paint Set</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹71149 </span>
+    <span class="discounted-price">₹849</span>
+    </div>
+     <button class="buy-button" 
+     onclick="addToCart('Chrome Professional Watercolor Kit 36 Colors Paint Set','https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSQlgkagLR2eiAF7OsWCuUITkczov-DCE6LPjMgy0YMwnjpiWFJpZfph0nuZD-Nja9WoWXI4iZEXCL9AElLaE6zz8Utbv_-FgIZQkziF1pyrk5sDJxTOZ6o',849)"> Add to Cart </button>
+
+ </div>
+
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTNHn49cpUAO-dtRyZCb-lB14LfZcbeILJHEZTrlQvEJ6BCtvHL6Apbyve4EP1EIKVS7vsAYdRXwwohFWWve7vTceALqyNRJNjjMFr6dI28hGzN2ePVOI71oA"
+        alt="File Folders" class="product-image">
+    <div class="brand">Eclet </div>
+    <div class="product-name">Eclet Leather Multipurpose Professional File Folders</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹286</span>
+    <span class="discounted-price">₹326</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Eclet Leather Multipurpose File Folders','https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTNHn49cpUAO-dtRyZCb-lB14LfZcbeILJHEZTrlQvEJ6BCtvHL6Apbyve4EP1EIKVS7vsAYdRXwwohFWWve7vTceALqyNRJNjjMFr6dI28hGzN2ePVOI71oA',326)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTTvGbLdfrIWQVIAUX62QNu6AvuYTvAKbCD21R3MS2WM1WRbsQBWeLRilNOo5HMUiayk8ZsfNkyR-oe8ebje_oerSv1cQm2vxnIo0PQyOvX3TA_ZfEUtoMfaQ"
+        alt="Chocolate" class="product-image">
+    <div class="brand">Ada </div>
+    <div class="product-name">Ada 3-tier Multipurpose Storage Shelf Rack</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹1965</span>
+    <span class="discounted-price">₹1199</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Ada 3-tier Multipurpose Storage Shelf Rack ','tatic.com/shopping?q=tbn:ANd9GcR6-rSMPUbokkN4ZEIs3gk2DljhKACoIH5VXBBR19BYQO0rcE-lgxHWlorNKTfTTXJMA9j_-8RQXu1ZUVZwASJ_JodiU1njdd1G22Dbf5fb',1199)"> Add to Cart </button>
+
+ </div>
+
+  <div class="card-content">
+   <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTFqIkym6hYww8OFjzxZO1XSxHPveBWBwlFpVWkAW1GugVEb6abpcb5rA1rlnzEfGPXD-AlhhxAgTJHL6M-Tw213e0SAeGEVoTF_HVdLhZslkbIN6yTfUfO"
+    alt="Hand Gloves" class="product-image">
+    <div class="brand">Aider </div>
+    <div class="product-name">Aider Magic Silicone Cleaning Hand Gloves </div>
+       <div class="price-info">
+       <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+       <span class="mrp">₹470</span>
+       <span class="discounted-price">₹399</span>
+    </div>
+    <button class="buy-button" 
+    onclick="addToCart('Aider Silicone Cleaning Hand Gloves','https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTFqIkym6hYww8OFjzxZO1XSxHPveBWBwlFpVWkAW1GugVEb6abpcb5rA1rlnzEfGPXD-AlhhxAgTJHL6M-Tw213e0SAeGEVoTF_HVdLhZslkbIN6yTfUfO',399)"> Add to Cart </button>
+</div>
+
+  </div>
+   </div>
+
+    <script src="sample.js"></script>  
+    
+  <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>
+

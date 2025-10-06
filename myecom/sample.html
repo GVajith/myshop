@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="slides">
+        <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide1"></div>
+      <img src="https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg" alt="Banner 1" />
+     <img src="https://static.vecteezy.com/system/resources/thumbnails/004/707/502/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg" alt="Banner 1" />
+     <!-- Add more images here if you want carousel effect -->
+    </div>
+  </section>
+<BR>
+  <!-- Bottom Line -->
+  <div class="bottom-line">
+    <p><strong>FREE SHIPPING</strong> on purchase above Rs. 499</p>
+  </div>
+
+    <!-- Bestsellers Section -->
+ <div class="container">
+        
+  <h1>Bestsellers</h1>      
+        
+  <div class="bestsellers-grid">
+                
+ <div class="card-content">
+   <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcThZSZr1sr3kpN4JUgu3xwRkndaECXQEom3cTJgKsm7OZT-chwaJUa-qFl0-yKro4uOudl5iFCqpJGz4bs6P2vnJseoMw5j5QlXIcgVopOB"
+    alt="Mila Beaute" class="product-image">
+    <div class="brand">Mila Beaute</div>
+    <div class="product-name">Mila Beaute Ultimate Beginner Makeup Kit</div>
+       <div class="price-info">
+       <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+       <span class="mrp">₹1200</span>
+       <span class="discounted-price">₹753</span>
+    </div>
+    <button class="buy-button" 
+    onclick="addToCart('Mila Beaute Makeup Kit','https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcThZSZr1sr3kpN4JUgu3xwRkndaECXQEom3cTJgKsm7OZT-chwaJUa-qFl0-yKro4uOudl5iFCqpJGz4bs6P2vnJseoMw5j5QlXIcgVopOB',753)"> Add to Cart </button>
+</div>
+                         
+ <div class="card-content">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTGHbg9rysF-ev3QU9QUioBwDUq0D4jodklJl3Zh8qsxZ_PojMY9pHL-Ay_5GpNFxKuHB8iH-oYT3HSp3C8PEpyFyoK08fHd4Nh4rzeoS0d"
+    alt="Campus" class="product-image">
+    <div class="brand">Campus</div>
+   <div class="product-name">Campus Women's OG-L3 Sneakers</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+    <span class="mrp"> ₹1153</span>
+    <span class="discounted-price">₹857</span>
+    </div>
+    <button class="buy-button"
+    onclick="addToCart('Campus Sneakers','https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTGHbg9rysF-ev3QU9QUioBwDUq0D4jodklJl3Zh8qsxZ_PojMY9pHL-Ay_5GpNFxKuHB8iH-oYT3HSp3C8PEpyFyoK08fHd4Nh4rzeoS0d',857)"> Add to Cart </button>
+  </div>
+            
+ <div class="card-content">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRzgDVWXXXEijZ1AqPAK2yikzJXIkZwYo6EvpdQad-pNj3lcVfrbwRQNLSoLOWHWcivq1Gcnnb9pfdHsfpN3O6MHR4DnScGfoeI2IxntqA"
+        alt="Titan" class="product-image">
+    <div class="brand">Titan</div>
+    <div class="product-name">Titan Classic Slim Multifunction Quartz Analog Watch</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹14,635 </span>
+    <span class="discounted-price">₹11,515</span>
+    </div>
+     <button class="buy-button" 
+     onclick="addToCart(`Titan Men's Watch`,'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRzgDVWXXXEijZ1AqPAK2yikzJXIkZwYo6EvpdQad-pNj3lcVfrbwRQNLSoLOWHWcivq1Gcnnb9pfdHsfpN3O6MHR4DnScGfoeI2IxntqA',11515)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQr5j70GB5SVExAgS-W-WI6dYzguA3BuPsa31DYZMcSRlJJgF--JbAkxDuPKTnwifJPLZS-6CdJVgdq8TEXTyete-4GR9-kkr_liVgHudE8"
+        alt="Roadster" class="product-image">
+    <div class="brand">Roadster</div>
+    <div class="product-name">Roadster Men's Printed T-shirt</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹699 </span>
+    <span class="discounted-price">₹549</span>
+    </div>
+     <button class="buy-button"
+     onclick="addToCart(`Roadster Men's T-shirt`,'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQr5j70GB5SVExAgS-W-WI6dYzguA3BuPsa31DYZMcSRlJJgF--JbAkxDuPKTnwifJPLZS-6CdJVgdq8TEXTyete-4GR9-kkr_liVgHudE8',549)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR95RrjhMcFzY32-PXxMz1WN53_Rcppmu0TMUqmEtmpBz6bqhO0vn0IXP5-TVPBXG_IrmgERX29sT7RtyuEvRSXO7hxH6tLX6FYw1TJ_U5YJhEUjUlhCONi"
+        alt="Kidsmate" class="product-image">
+    <div class="brand">Kidsmate</div>
+    <div class="product-name">Kidsmate Junior Plug N Play Tricycle</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹1799 </span>
+    <span class="discounted-price">₹1409</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Kidsmate Junior Tricycle','https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR95RrjhMcFzY32-PXxMz1WN53_Rcppmu0TMUqmEtmpBz6bqhO0vn0IXP5-TVPBXG_IrmgERX29sT7RtyuEvRSXO7hxH6tLX6FYw1TJ_U5YJhEUjUlhCONi',1409)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS0dCq9MCPCd0DPwK4MEW9CH5xMsE-FIQg_hYW1UQt_-xvM9dFjmxb2AwGXQbmO9fRkSFRK1YR7dhvbQ4IA6ETCn1u1Yx2c_nMfuDCKIRY"
+        alt="LEGACY OF COMFORT" class="product-image">
+    <div class="brand">LEGACY OF COMFORT </div>
+    <div class="product-name">LEGACY OF COMFORT Velvet Modern Cloud Sofa</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹34,769 </span>
+    <span class="discounted-price">₹30,589</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('LEGACY OF COMFORT Cloud Sofa','https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS0dCq9MCPCd0DPwK4MEW9CH5xMsE-FIQg_hYW1UQt_-xvM9dFjmxb2AwGXQbmO9fRkSFRK1YR7dhvbQ4IA6ETCn1u1Yx2c_nMfuDCKIRY',30589)"> Add to Cart </button>
+ </div>
+ </div>
+
+ </div>
+    <script src="sample.js"></script> 
+    
+  <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+            
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <style>
+       
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section with Text Over Image */
+        .about-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+          color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+         /* About Content Section */
+        .about-content {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .about-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+       /* Mission Section - Side by Side */
+.mission-section {
+    background: linear-gradient(135deg, #dba634, #978860);
+    color: white;
+    padding: 60px 0;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.mission-image {
+    flex: 1;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mission-content {
+    flex: 1;
+    text-align: left;
+    height: auto;
+}
+
+.mission-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.mission-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ /* Values Section */
+        .values-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        
+        .value-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+  
+<!-- Hero Section with Text Over Image -->
+ <section class="about-hero">
+        <img src="https://media.istockphoto.com/id/1215812761/photo/internet-shopping-with-laptop.jpg?s=612x612&w=0&k=20&c=K4RcbDJLHIPZb_oU7okSK4dX1tkEJVU-jhqxYQwTP9s=" alt="MyShop Store" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>About MyShop</h1>
+            <p>Your trusted Partner for Seamless Online Shopping</p>
+        </div>
+    </section>
+
+    <div class="card-container">
+        <!-- Who We Are Section -->
+        <section class="about-content">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                      🛒
+                    </div>
+                    <h3 class="card-title">Our Story</h3>
+                    <p>MyShop is a leading online store and has grown into a trusted online marketplace serving customers nationwide.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                      🎯
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p>To provide high-quality products with exceptional customer service, making online shopping convenient and enjoyable for everyone.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                    👁‍🗨
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p>To become the most customer-centric online marketplace, where people can find and discover anything they want to buy online.</p>
+                </div>
+            </div>
+        </section>
+    <!-- Mission Section - Side by Side -->
+<section class="mission-section">
+    <div class="mission-container">
+        <!-- Image on the left -->
+        <div class="mission-image">
+            <img src="https://www.thestatesman.com/wp-content/uploads/2020/12/QT-Online-Shopping.jpg" alt="commitment">
+        </div>
+        
+        <!-- Content on the right -->
+        <div class="mission-content">
+            <h2 class="mission-title">Our Commitment to Excellence</h2>
+            <p class="mission-text">
+                At MyShop, we believe that every customer deserves the best shopping experience. 
+                From our carefully curated product selection to our fast and reliable delivery service, 
+                we provide a wide range of products, secure payment gateways, 24/7 dedicated support, easy returns and refunds.
+            </p>
+        </div>
+    </div>
+</section> 
+     <!-- Values Section -->
+        <section class="values-section">
+            <h2 class="section-title">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        🙋‍♀️🙋‍♂️
+                    </div>
+                    <h3 class="value-title">Customer First</h3>
+                    <p>Our customers are at the heart of everything we do. Their satisfaction is our top priority.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                     🏆
+                    </div>
+                    <h3 class="value-title">Quality</h3>
+                    <p>We carefully select each product to ensure it meets our high standards of quality.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                      🚛
+                    </div>
+                    <h3 class="value-title">Fast Delivery</h3>
+                    <p>We understand the importance of timely delivery and work hard to get your orders to you quickly.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                    💰
+                    </div>
+                    <h3 class="value-title">Value for Money</h3>
+                    <p>We offer competitive prices without compromising on product quality or customer service.</p>
+                </div>
+            </div>
+        </section>
+  <script src="sample.js"></script>
+  
+<!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>  
+
+

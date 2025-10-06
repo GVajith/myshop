@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h2, h3, h4 {
+      color: #222;
+    }
+     #deals {
+      text-align: center;
+      padding: 0 20px;
+      padding-left: 0;
+      padding-right: 0;
+      background: #ffffff;
+    }
+
+    #deals h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #d35400;
+    }
+
+    #deals img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .deal {
+      background: #ebc39f;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      transition: 0.3s;
+    }
+
+    .deal:hover {
+      background: #eaeaea;
+      transform: translateY(-5px);
+    }
+
+    .deal h3, .deal h4 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+  .bottom-line {
+    margin-top: -28px;
+  }
+    .newsletter-body {
+      text-align: center;
+      padding: 40px 20px;
+      background: #ffefdb;
+      margin-top: 40px;
+    }
+
+    .newsletter-body h3 {
+      margin-bottom: 10px;
+    }
+
+    .newsletter-body input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .newsletter-body button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      border: none;
+      background: #d35400;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .newsletter-body button:hover {
+      background: #e67e22;
+    }
+</style>
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+
+     <!-- Deals -->
+  <section id="deals">
+    <img src="https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg" alt="Mega Sale"
+    width="2500" height="500"/>
+
+    <!-- Bottom Line -->
+  <div class="bottom-line">
+    <p><strong>FREE SHIPPING</strong> on purchase above Rs. 499</p>
+  </div>
+
+    <h1 style="color: #c56408;">🔥 Special Deals For You 🔥</h1> 
+      <img src="sale.jpeg" alt="Deals">
+  
+    <div class="deal">
+      <h3>Buy Any Two & Get 30% OFF</h3>
+      <p>Grab stylish watches and enjoy 30% discount on your second purchase!</p>
+    </div>
+
+    <div class="deal">
+      <h3>40% OFF on Samsung Mobiles</h>
+      <p>Latest Samsung smartphones and accessories at unbeatable prices.</p>
+    </div>
+
+    <div class="deal">
+      <h3>Flat 50% OFF on Clothing</h3>
+      <p>Trendy shirts, jeans, and jackets at half the price this weekend only!</p>
+    </div>
+
+    <div class="deal">
+      <h3>Buy 1 Get 1 Free</h3>
+      <p>On selected headphones & speakers. Don’t miss out!</p>
+    </div>
+  </section> 
+
+  <div class="newsletter-body">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Stay updated with the latest deals and exclusive offers.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>  
+
+    <script src="sample.js"></script>
+
+   <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+  </body>
+</html>

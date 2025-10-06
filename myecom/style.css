@@ -1,0 +1,549 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sticky Header */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Top Header Layout */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #ffffff;
+}
+
+/* Logo */
+.logo img {
+  width: 110px;
+  height: 80px;
+}
+
+
+/* Search Box */
+.search-box {
+  position: relative;
+  width: 40%;
+}
+.search-box input {
+  width: 100%;
+  padding: 18px 0.1px 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.search-box button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  padding: 10px 5px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Top Navigation Links */
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.top-links a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #bb5f0a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.top-links a:hover {
+  color: #c42995;
+}
+
+.top-links .cart-count {
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  vertical-align: super;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  background-color: #a56d04;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: -16px;
+}
+.bottom-navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+}
+.bottom-navbar li {
+  margin: 0 15px;
+  position: relative; /* ✅ Required for dropdown */
+}
+.bottom-navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px 12px;
+  display: block;
+}
+.bottom-navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.bottom-navbar ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Below the parent */
+  left: 0;
+  background: #a56d04;
+  list-style: none;
+  min-width: 160px;
+  z-index: 1000; /* ✅ Ensures it appears above carousel */
+}
+
+.bottom-navbar ul li ul li a {
+  padding: 10px;
+  color: #fff;
+  font-weight: normal;
+}
+
+
+/* Show dropdown on hover */
+.bottom-navbar ul li:hover ul {
+  display: block;
+}
+
+
+/* Carousel Section */
+.carousel {
+  width: 100%;
+  height: 450px;
+  margin: 2px auto;
+  overflow: hidden;
+  position: relative;
+}
+.slides {
+  display: flex;
+  width: 100%; /* 4 slides total (3 + 1 duplicate) */
+  height: 100%;
+  animation: slide 20s infinite ;
+}
+
+.carousel:hover .slides {
+  animation-play-state: paused;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+.slide1 {
+      background-image: url('https://img.freepik.com/vetores-gratis/modelo-de-banner-de-venda-horizontal-abstrato-plano_23-2149017816.jpg')
+       }
+
+    .slide2 {
+      background-image: url('https://img.freepik.com/free-vector/hand-drawn-kids-toys-sale-banner_23-2149651210.jpg');
+    }
+
+    .slide3 {
+      background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/grocery-sale-retail-or-e-commerce-banner-ad-design-template-67720435bb809be27f46dfb1dd44c6fa_screen.jpg?ts=1606113265');
+    }
+
+/* Bottom Line */
+.bottom-line {
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Bestsellers Section */
+.container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color:#642102;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .bestsellers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+      
+        .card-content {
+          text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+
+        .card-content:hover {
+          transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+         .product-image {
+            width: 250px;
+            height: 250px;
+            /* object-fit: contain; */
+            /* margin: 0 auto ; */
+            padding: 10px;
+        }
+        
+        .brand {
+            font-weight: bold;
+            color: #8a3812;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .product-name {
+          font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            color: rgb(49, 3, 3);;
+        }
+        
+        .price-info {
+            text-align: center;
+            gap: 10px;
+        }
+        
+        .mrp {
+            color: #888;
+            text-decoration: line-through;
+        }  
+        
+        .discounted-price {
+            font-weight: bold;
+            color: #2c5530;
+            font-size: 1.1rem;
+        }
+        
+        .discount {
+            background: #f1d4b1;
+            color: #2e0227;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .buy-button {
+            background: #cf8d57;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .buy-button:hover {
+            background: #642102;
+        }
+             
+   @media (max-width: 768px) {
+    .bestsellers-grid {
+      grid-template-columns: 1fr;
+     }
+ }
+
+   @media (max-width: 600px) {
+  .cart-title {
+    flex-direction: column; /* stack image and text */
+  }
+}
+  #cart {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;/* space between image and text */
+}
+
+.cart-title h2 {
+  margin-top: 26px;
+  color: #5a2200; /* match the color seen in image */
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background: #f5f1ed;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.cart-item-left img {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h4 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.cart-item-details p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.cart-item-details .item-total {
+  font-weight: bold;
+  color: #2c2c6c;
+}
+
+.remove-btn {
+  margin-top: 8px;
+  padding: 10px 10px;
+  background: #ec8074;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 8px 0;
+}
+
+.quantity-control button {
+  padding: 5px 5px;
+  background: #798fd8;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.quantity-control button:hover {
+  background: #0a079e;
+}
+
+.quantity-control span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container h2 {
+  text-align: center;
+;
+  margin-bottom: 30px;
+  color: #642102;
+}
+
+.empty-cart {
+  font-size: 19px;
+  font-weight: bold;
+  color: #1f1e1e;
+  padding: 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.cart-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.checkout-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #0069d9;
+}
+
+/* Footer Styles */
+         .footer {
+      background: #1c1c1c;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 60px;
+      width: 100%;
+    }
+
+    .f-container{
+      max-width: 4000px;
+      margin: auto;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer h2, 
+    .footer h3 {
+      color: #f8b90b;
+      margin-bottom: 15px;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 22px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #f8b400;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 5px 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #f8b400;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      width: 70%;
+      margin-bottom: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background: #f8b400;
+      color: #1c1c1c;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background: #e0a600;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+    }
+
+    .footer-bottom a{
+      text-decoration: none;
+      color: #aaa;
+    }
+
+    .footer-bottom a:hover{
+      text-decoration: underline;
+    }
+        

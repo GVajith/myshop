@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.rap.in.ua/wp-content/uploads/2023/05/546879865432131.jpg') no-repeat center center/cover;
+  filter: blur(3.8px); /* Adjust blur size */
+  z-index: -1; /* Push it behind content */
+}
+
+.header-text h1 {
+  text-align: center;
+  color: yellow;
+  padding: 50px;
+    font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header-text p {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-top: -50px;
+}
+
+.card-content {
+  text-align: center;
+  background: rgb(241, 239, 239);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;       /* reduced from 30px */
+  width: 220px;        /* set fixed width for smaller cards */
+  margin: 10px auto;
+  
+  }
+.product-image {
+  width: 100%;         /* fits inside card */
+  max-height: 180px;   /* reduce image height */
+  object-fit: contain;
+ }
+  .brand {
+            font-weight: bold;
+            color: #8a3812;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+                 
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <div class="sticky">
+  <header class="top-header">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUrZVpFHYWKLbChO0cZClI3-kIabjWdOs9Lfa_Z4NoAthKpCpxiLlTejBWZ3Nk2arR7E&usqp=CAU" alt="Logo"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for Products" />
+    <button>🔍</button>
+  </div>
+
+  <div class="top-links">
+    <a href="sample.html"> Home</a>
+    <a href="SampleAbout.html"> About Us</a>
+    <a href="SampleDeals.html">Deals</a>
+    <a href="SampleLogin.html">Login</a>
+    <a href="SampleSignup.html"> Sign Up</a>
+    <a href="SampleCart.html"> 🛒Cart <span class="cart-count" id="cart-count">0</span></a>
+  </div>
+</header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <ul>
+        <li><a href="#">Grocery ▾</a>
+      
+      <ul>
+        <li><a href="SampleFood.html">Food & Beverages</a></li>
+          <li><a href="SampleHome.html">Home Care</a></li>
+         <li><a href="SampleStationery.html">Stationery</a></li>
+
+        </ul>
+    </li>
+      <li>
+        <a href="#">Fashion ▾</a>
+        <ul>
+       <li><a href="SampleMen.html">Men</a></li>
+       <li><a href="SampleWomen.html">Women</a></li>
+      <li><a href="SampleKids.html">Kids</a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#">Footwear ▾</a>
+      <ul>
+        <li><a href="SFootMen.html">Men</a></li>
+       <li><a href="SFootWomen.html">Women</a></li>
+      <li><a href="SFootKids.html">Kids</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Beauty ▾</a>
+    <ul>
+        <li><a href="SampleCosmetics.html">Cosmetics</a></li>
+        <li><a href="SamplePersonal.html">Personal Care</a></li>
+        </ul>
+    </li>
+
+    <li><a href="SampleElectronics.html">Electronics</a></li>
+
+      <li><a href="SampleAccessories.html">Accessories</a></li>
+      <li><a href="SampleFurniture.html">Furniture</a></li>
+      <li><a href="SampleAppliances.html">Appliances</a></li>
+      <li><a href="SampleToys.html">Toys</a></li>
+      <li><a href="SampleCook.html">Cookware</a></li>
+      <li><a href="SampleFitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <div class ="header-text">
+    <h1>Your Home, Our Care</h1>
+    <p>From Everyday Chores to Everyday Bliss: Find What You Need</p>
+  </div>
+
+ <div class="container">
+<br>
+<br>
+<br>
+
+        
+  <div class="bestsellers-grid"> 
+    <div class="card-content">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS46ulFUYYxyihSvPQKK89Cf31jnmYKHIuLSSMvwR5tZys9ia_grE_ceNlrs7eOBqI-Wl2WZ4I3c695Wd2XKIqmsm4aOZBQbk3Z3mZcSd1xJMrReZ3abmre"
+        alt="Cleaner" class="product-image">
+    <div class="brand">Pueronline</div>
+    <div class="product-name">Pueronline All Purpose Cleaner</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹315 </span>
+    <span class="discounted-price">₹279</span>
+    </div>
+     <button class="buy-button"
+     onclick="addToCart(`Pueronline All Purpose Cleaner`,'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS46ulFUYYxyihSvPQKK89Cf31jnmYKHIuLSSMvwR5tZys9ia_grE_ceNlrs7eOBqI-Wl2WZ4I3c695Wd2XKIqmsm4aOZBQbk3Z3mZcSd1xJMrReZ3abmre',279)"> Add to Cart </button>
+</div>
+                                         
+ <div class="card-content">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRIJgk2NlXSRgg5ib-vUYWqAbPyCjtyoqPbrUYhpcs-K9f1DyecY6GHJwJvf9XKveYUcSItHn9dWddW-oyrPTFcf-xtoj_ZoJ5aarq_adgd"
+    alt="Soap Dispenser" class="product-image">
+    <div class="brand">Intellio Boyle</div>
+   <div class="product-name">Home Centre Intellio Boyle Soap Dispenser</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+    <span class="mrp"> ₹459</span>
+    <span class="discounted-price">₹399</span>
+    </div>
+    <button class="buy-button"
+    onclick="addToCart('Intellio Boyle Soap Dispenser','https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRIJgk2NlXSRgg5ib-vUYWqAbPyCjtyoqPbrUYhpcs-K9f1DyecY6GHJwJvf9XKveYUcSItHn9dWddW-oyrPTFcf-xtoj_ZoJ5aarq_adgd',399)"> Add to Cart </button>
+  </div>
+            
+ <div class="card-content">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_Wvka_6NZs-Y_MXmwqqfdWTyWraZPsx3d2wXw3wzcKwDpbxfugpT9oSvimvHtGF6TjGXg63cWPB_LjqwoNi2mop5o5cvZDpYx4arL0q6zEbfUFBjq7opDsg"
+        alt="Liquid Detergent" class="product-image">
+    <div class="brand">Nourish'S Puer</div>
+    <div class="product-name">Nourish'S Puer Blooming Garden Liquid Detergent</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹799 </span>
+    <span class="discounted-price">₹679</span>
+    </div>
+     <button class="buy-button" 
+     onclick="addToCart(`Nourish'S Puer Blooming Garden Liquid Detergent`,'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_Wvka_6NZs-Y_MXmwqqfdWTyWraZPsx3d2wXw3wzcKwDpbxfugpT9oSvimvHtGF6TjGXg63cWPB_LjqwoNi2mop5o5cvZDpYx4arL0q6zEbfUFBjq7opDsg',679)"> Add to Cart </button>
+
+ </div>
+
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGebkV7KYkDWXJMFtzBVAKxEZUUgdmcjjSJ-cal89pO9sx58YPr4jRLL8PHmo-9cyFeK5yQthx0RUHvDcEl4MsTKpSdlGnqJv4aXDFTYusEzj2Av0DX_AG0A"
+        alt="Floor Cleaner" class="product-image">
+    <div class="brand">Gigglenest</div>
+    <div class="product-name">Gigglenest 7 in 1 Electric Water Mop for Floor Cleaner  </div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹2660</span>
+    <span class="discounted-price">₹2289</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Gigglenest 7 in 1 Electric Water Mop','https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGebkV7KYkDWXJMFtzBVAKxEZUUgdmcjjSJ-cal89pO9sx58YPr4jRLL8PHmo-9cyFeK5yQthx0RUHvDcEl4MsTKpSdlGnqJv4aXDFTYusEzj2Av0DX_AG0A',2289)"> Add to Cart </button>
+
+ </div>
+
+ <div class="card-content">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6-rSMPUbokkN4ZEIs3gk2DljhKACoIH5VXBBR19BYQO0rcE-lgxHWlorNKTfTTXJMA9j_-8RQXu1ZUVZwASJ_JodiU1njdd1G22Dbf5fb"
+        alt="Chocolate" class="product-image">
+    <div class="brand">Ada </div>
+    <div class="product-name">Ada 3-tier Multipurpose Storage Shelf Rack With Wheels</div>
+    <div class="price-info">
+    <span style="color: #2c5530; font-weight: bold;">MRP:  </span>
+    <span class="mrp">₹1965</span>
+    <span class="discounted-price">₹1199</span>
+    </div>
+     <button class="buy-button"
+    onclick="addToCart('Ada 3-tier Multipurpose Storage Shelf Rack ','https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6-rSMPUbokkN4ZEIs3gk2DljhKACoIH5VXBBR19BYQO0rcE-lgxHWlorNKTfTTXJMA9j_-8RQXu1ZUVZwASJ_JodiU1njdd1G22Dbf5fb',1199)"> Add to Cart </button>
+
+ </div>
+
+  <div class="card-content">
+   <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTFqIkym6hYww8OFjzxZO1XSxHPveBWBwlFpVWkAW1GugVEb6abpcb5rA1rlnzEfGPXD-AlhhxAgTJHL6M-Tw213e0SAeGEVoTF_HVdLhZslkbIN6yTfUfO"
+    alt="Hand Gloves" class="product-image">
+    <div class="brand">Aider </div>
+    <div class="product-name">Aider Magic Silicone Cleaning Hand Gloves </div>
+       <div class="price-info">
+       <span style="color: #2c5530; font-weight: bold;">MRP: </span>
+       <span class="mrp">₹470</span>
+       <span class="discounted-price">₹399</span>
+    </div>
+    <button class="buy-button" 
+    onclick="addToCart('Aider Silicone Cleaning Hand Gloves','https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTFqIkym6hYww8OFjzxZO1XSxHPveBWBwlFpVWkAW1GugVEb6abpcb5rA1rlnzEfGPXD-AlhhxAgTJHL6M-Tw213e0SAeGEVoTF_HVdLhZslkbIN6yTfUfO',399)"> Add to Cart </button>
+</div>
+
+  </div>
+   </div>
+
+    <script src="sample.js"></script>  
+    
+  <!--footer-->
+  <footer class="footer">
+    <div class="f-container">
+
+    <div class="footer-container">
+         <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sample.html">Home</a></li>
+          <li><a href="SampleAbout.html">About Us</a></li>
+          <li><a href="SampleDeals.html">Deals</a></li>
+          <li><a href="SampleCart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="SampleContact.html">Contact</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+        <a href="https://www.facebook.com/business/m/marketplace-ecommerce">🌐 Facebook</a><br>
+        <a href="https://business.instagram.com/?locale=en_GB">📸 Instagram</a><br>
+        <a href="https://techcrunch.com/2022/03/09/twitter-expands-its-e-commerce-efforts-with-launch-of-twitter-shops/">🐦 Twitter</a><br>
+        <a href="https://support.google.com/youtube/answer/12257682?hl=en">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Subscribe</h3>
+        <p>Get the latest deals and updates directly to your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 MyShop. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>
+
